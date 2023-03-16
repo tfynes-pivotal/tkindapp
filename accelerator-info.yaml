@@ -1,0 +1,22 @@
+id: 39db0770-b9d3-4983-8ba8-5b41ce67f5c1
+timestamp: 2023-03-16T20:33:51Z
+accelerator:
+  name: tanzu-java-web-app
+  source:
+    image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:96763f338c4af11e1c5fd6dd31a0a903b68a78a43a6b21ee34b555fcb99ad28e
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: java-version
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: tap-workload
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  includeBuildToolWrapper: true
+  javaVersion: 17
+  projectName: tKindApp
+  repositoryPrefix: tfynes-pivotal
+  updateBoot3: false
